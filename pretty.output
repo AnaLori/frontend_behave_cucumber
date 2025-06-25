@@ -1,0 +1,24 @@
+Feature: Orders flow to ecommerce-playground.lambdatest.io # features/order.feature:2
+
+  Background: ecommerce-playground.lambdatest.io  # features/order.feature:4
+
+  @login
+  Scenario Outline: Log in with different valid credentials -- @1.1                      # features/order.feature:16
+    Given that I am on the website's home page                                           # None
+    When I fill in the email "anatestedesafio@gmail.com" and password "senhaenjoeiteste" # None
+    And click on the submit button                                                       # None
+    Then Validate the title after login                                                  # None
+    And Validate the search products field after login                                   # None
+
+  @search
+  Scenario Outline: Search for different items successfully -- @1.1   # features/order.feature:25
+    Given that I am on the website's home page                        # None
+    When I search for the product "Canon EOS 5D"                      # None
+    Then search results must be shown                                 # None
+
+  @search
+  Scenario Outline: Search for different items successfully -- @1.2   # features/order.feature:26
+    Given that I am on the website's home page                        # None
+    When I search for the product "HTC Touch HD"                      # None
+    Then search results must be shown                                 # None
+
